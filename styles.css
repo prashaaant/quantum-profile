@@ -1,0 +1,254 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #ffffff;
+    color: #1a202c;
+    line-height: 1.5;
+}
+
+/* Container styles */
+.container {
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 96px 64px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+    max-width: 1024px;
+    width: 100%;
+    padding: 0 192px;
+}
+
+/* Profile section */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.profile-image {
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.intro-text {
+    font-size: 16px;
+    line-height: 28px;
+    color: #1a202c;
+    font-weight: 400;
+}
+
+/* Links */
+.link {
+    color: #3182ce;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.link:hover {
+    color: #2c5aa0;
+    text-decoration: underline;
+}
+
+/* Section styles */
+.experience-section,
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.section-title {
+    font-size: 16px;
+    line-height: 24px;
+    color: #718096;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Experience list */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.experience-item {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.experience-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.experience-title {
+    font-size: 16px;
+    line-height: 24px;
+    color: #1a202c;
+    font-weight: 400;
+    margin: 0;
+}
+
+.experience-date {
+    font-size: 16px;
+    line-height: 24px;
+    color: #718096;
+    font-weight: 400;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* Contact list */
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.contact-item {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: left;
+    width: 100%;
+}
+
+.contact-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: #1a202c;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .content {
+        padding: 0 96px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 48px 32px;
+    }
+    
+    .content {
+        padding: 0 16px;
+        gap: 32px;
+    }
+    
+    .profile-section {
+        gap: 32px;
+    }
+    
+    .profile-header {
+        gap: 20px;
+    }
+    
+    .profile-text {
+        gap: 12px;
+    }
+    
+    .intro-text {
+        font-size: 15px;
+        line-height: 26px;
+    }
+    
+    .experience-item {
+        flex-direction: column;
+        gap: 4px;
+        align-items: flex-start;
+    }
+    
+    .experience-date {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 32px 16px;
+    }
+    
+    .content {
+        padding: 0 16px;
+        gap: 24px;
+    }
+    
+    .profile-image {
+        width: 36px;
+        height: 36px;
+        border-radius: 36px;
+    }
+    
+    .intro-text {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    
+    .section-title,
+    .experience-title,
+    .experience-date,
+    .contact-text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
