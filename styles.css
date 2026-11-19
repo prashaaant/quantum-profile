@@ -112,6 +112,10 @@ body {
     color: #737373;
 }
 
+[hidden] {
+    display: none !important;
+}
+
 /* Section styles */
 .experience-section,
 .contact-section {
