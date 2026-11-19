@@ -34,6 +34,9 @@
                         <p class="intro-text">
                             I'm happiest when designing in Figma or trekking in the wild. When I'm home, I read history books and spend time organizing my tiny room.
                         </p>
+                        <p class="intro-text">
+                            You can find me on <a href="https://x.com/prashaaantin" class="link">X</a> and <a href="https://www.linkedin.com/in/prashaaantin/" class="link">LinkedIn</a>, or reach me via <a href="mailto:messagetopc@gmail.com" class="link">email</a>.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -80,30 +83,24 @@
                 </div>
             </div>
 
-            <div class="contact-section">
-                <h3 class="section-title">Contact</h3>
-                <div class="contact-list">
-                    <div class="contact-item">
-                        <p class="contact-text">
-                            I am active on 
-                            <a href="https://x.com/prashaaantin" class="link">X</a>
-                        </p>
-                    </div>
-                    <div class="contact-item">
-                        <p class="contact-text">
-                            Connect with me on 
-                            <a href="https://www.linkedin.com/in/prashaaantin/" class="link">LinkedIn</a>
-                        </p>
-                    </div>
-                    <div class="contact-item">
-                        <p class="contact-text">
-                            Email me at 
-                            <a href="mailto:messagetopc@gmail.com" class="link">messagetopc@gmail.com</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <footer class="site-footer">
+                <hr class="footer-rule" />
+                <p class="local-time"><span id="local-time">--:--</span> in Bangalore, India</p>
+            </footer>
         </div>
     </div>
+    <script>
+        // Local time in Bangalore for the footer
+        function updateLocalTime() {
+            var el = document.getElementById('local-time');
+            if (!el) return;
+            el.textContent = new Date()
+                .toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata', hour: 'numeric', minute: '2-digit', hour12: true })
+                .replace(' ', '')
+                .toLowerCase();
+        }
+        updateLocalTime();
+        setInterval(updateLocalTime, 30000);
+    </script>
 </body>
 </html>
