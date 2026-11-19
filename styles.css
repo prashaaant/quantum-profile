@@ -79,17 +79,43 @@ body {
     font-weight: 400;
 }
 
-/* Links */
+/* Links: body-coloured text with a light underline that darkens on hover */
 .link {
-    color: #3182ce;
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 0.2s ease;
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(26, 32, 44, 0.2);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    transition: text-decoration-color 0.2s ease;
 }
 
-.link:hover {
-    color: #2c5aa0;
-    text-decoration: underline;
+.link:hover,
+.link:focus-visible {
+    text-decoration-color: rgba(26, 32, 44, 0.8);
+}
+
+.link:focus-visible {
+    outline: 2px solid rgba(26, 32, 44, 0.4);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Footer */
+.site-footer {
+    width: 100%;
+}
+
+.footer-rule {
+    width: 48px;
+    border: 0;
+    border-top: 1px solid #e2e8f0;
+    margin: 32px 0 24px;
+}
+
+.local-time {
+    font-size: 14px;
+    line-height: 22px;
+    color: #a0aec0;
 }
 
 /* Section styles */
